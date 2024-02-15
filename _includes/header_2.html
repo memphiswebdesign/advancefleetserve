@@ -1,0 +1,74 @@
+<header>
+   {% include header_top.html %}
+    <div id="sticky-header" class="menu-area">
+        <div class="fluid-container">
+            <div class="white-bg logo-area px-lg-5 px-md-4 px-3">
+                <div class="row align-items-center">
+                    <div class="d-flex mr-auto">
+                        <div class="logo">
+                            <a href="{{site.url}}"><img src="{{site.logo}}" class="img-fluid" alt="{{site.title}}"></a>
+                        </div>
+                </div>
+                    <div class="ml-auto d-none d-lg-block">
+                        <div class="header-cta pt-15 pb-15">
+                            <div class="header-single-cta">
+                                <h3><i class="far fa-clock"></i> Mon-Fri</h3>
+                                <span class="haz-color">7:00am - 3:30pm</span>
+                            </div>
+                            <div class="header-single-cta">
+                                <h3><i class="fas fa-life-ring"></i> 24/7</h3>
+                                <span class="haz-color">Emergency Calls</span>
+                            </div>
+                            <div class="header-single-cta">
+                                <h3><i class="fas fa-phone"></i> Call Us</h3>
+                                <span><a href="tel:2058683039" class="haz-color">205-868-3039</a></span>
+                            </div>
+                            <!-- <div class="header-single-cta">
+                                <h3><i class="far fa-envelope"></i> Email Us</h3>
+                                <span>support@gmail.com</span>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-12 mr-auto mobile-menu-wrap">
+                        <div class="mobile-menu"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-wrap black-bg menu-margin-bottom d-none d-lg-block pr-45 pl-15">
+                <div class="row align-items-center">
+                    <div class="col-xl-12 col-lg-12 text-center">
+                        <div class="main-menu second-menu">
+                          {% include navigation.html %}
+                        </div>
+                    </div>
+                    <div class="col-xl-1 col-lg-1 d-none">
+                        <div class="menu-icon second-menu-icon">
+                            <i class="icofont-search-1" data-toggle="modal" data-target="#search-modal"></i>
+                            <a href="#" class="menu-tigger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas-menu">
+             {% include offcanvas_menu.html %}
+            </div>
+            <div class="offcanvas-overly"></div>
+        </div>
+    </div>
+</header>
+<!-- Modal Search -->
+<div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <form>
+                <input type="text" id="search-input" placeholder="Search blog posts..">
+                <button><i class="fa fa-search"></i></button>
+            </form>
+            <ul id="results-container"></ul>
+        </div>
+    </div>
+</div>

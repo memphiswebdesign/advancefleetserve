@@ -1,0 +1,44 @@
+#Please use the main menu items under the "text"
+
+# - text: Home
+#   url: /
+#   submenu:
+#   - text: Home 2
+#     url: /pages/index-2
+#   - text: Home 3
+#     url: /pages/index-3
+- text: About
+  url: /about-us
+  submenu:
+  - text: About Us
+    url: /about-us
+  - text: Our Team
+    url: /team
+  - text: Locations
+    url: /contact#locations
+- text: Parts
+  url: /truck-parts
+  submenu:
+  - text: Truck Parts
+    url: /truck-parts
+  - text: Trailer Parts
+    url: /trailer-parts
+- text: Services
+  url: /truck-service
+  submenu: 
+  - text: Truck Service
+    url: /truck-service
+  - text: Trailer Service
+    url: /trailer-service
+  - text: Mobile Washing
+    url: /mobile-washing
+  - text: Emergency Road Service
+    url: /emergency-road-service
+- text: Truck & Trailer Sales
+  url: /sales
+- text: Leasing & Rentals
+  url: /lease-rentals
+- text: Specials
+  url: /specials
+- text: Careers
+  url: https://www.indeed.com/cmp/Advance-Trailer-Maintenance-2/
