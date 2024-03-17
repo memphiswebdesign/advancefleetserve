@@ -46,8 +46,9 @@
       doAnimations($animatingElements);
     });
     BasicSlider.slick({
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 10000,
+      swipe: false,
       fade: true,
       prevArrow:
         '<button type="button" class="slick-prev"><i class="icofont-long-arrow-left"></i>Prev</button>',

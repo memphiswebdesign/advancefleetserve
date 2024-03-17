@@ -1,9 +1,9 @@
 ---
 layout: featured
-title: Highly customizable
-icon: /assets/img/icons/air-freshener-solid.svg
-image: /assets/img/services/03.jpg
-description: Highly customizable parturient denouncing pleasure and praising pain was born and I will give you a complete.
+title: Trailer Services
+icon: /assets/img/icons/american-sign-language-interpreting-solid.svg
+image: /assets/img/services/02.jpg
+description: Service escription coming soon
 ---
 
 <div class="row">
@@ -21,7 +21,7 @@ description: Highly customizable parturient denouncing pleasure and praising pai
 <div class="row">
     <div class="col-xl-6 col-lg-12">
         <div class="s-details-img mb-30">
-            <img src="{{site.baseurl}}/assets/img/service/4.jpg" alt="{{page.title}}">
+            <img src="{{site.baseurl}}/assets/img/service/2.jpg" alt="{{page.title}}">
         </div>
     </div>
     <div class="col-xl-6 col-lg-12">

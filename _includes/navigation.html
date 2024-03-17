@@ -15,7 +15,7 @@
     {% endif %}
      
      <li>
-         <a href="{{link.url}}">{{link.text}}{% if link.submenu %}<i class="icofont-simple-down"></i>{% endif %}</a>
+         <a href="{{link.url}}" target="{{link.target}}">{{link.text}}{% if link.submenu %}<i class="icofont-simple-down"></i>{% endif %}</a>
         {% if link.submenu %}
         <ul class="sub-menu">
             {% for sublink in link.submenu %}
