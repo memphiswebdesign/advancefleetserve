@@ -1243,13 +1243,13 @@ label {
 /* 10. Team */
 .single-team {
 	position: relative;
-	overflow: hidden;
+/*	overflow: hidden;*/
 }
 .team-img {
 	position: relative;
-	overflow: hidden;
+/*	overflow: hidden;*/
 }
-.team-img::before {
+/*.team-img::before {
 	content: "";
 	position: absolute;
 	height: 100%;
@@ -1262,26 +1262,30 @@ label {
 }
 .single-team:hover .team-img::before{
 	opacity: .7;
-}
+}*/
 .team-img img {
 	width: 100%;
 }
 .team-info {
-	background: #fff;
+	background: rgba(255,255,255,.85);
+	    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 	position: absolute;
-	bottom: -75px;
-	width: 90%;
+	bottom: 0;
+	transform: translateY(30%);
+	width: 94%;
 	left: 0;
 	right: 0;
 	margin: auto;
-	transition: .5s;
+/*	transition: .5s;*/
 	padding: 10px 0;
+	box-shadow: 0 2px 8px -3px rgba(32,32,32,.15);
 }
-.single-team:hover .team-info{
+/*.single-team:hover .team-info{
 	bottom: 14px;
-}
+}*/
 .team-info h3 {
-	font-size: 20px;
+	font-size: 17px;
 	margin-bottom: 5px;
 }
 .team-info span {
