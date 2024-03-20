@@ -459,7 +459,11 @@ label {
 	display: none;
 }*/ 
 
-.logo img {height: 33px;}
+.logo img {
+	height: 33px;
+}
+
+.logo a {display: inline-block;}
 
 .transparent-bg.sticky {
 	background: #111;
