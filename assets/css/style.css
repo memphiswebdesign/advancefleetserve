@@ -942,9 +942,21 @@ label {
 	width: inherit;
 }
 .cta-area {
-	background-position: center top;
+	position: relative;
+	background-position: center;
 	background-size: cover;
+	background-attachment: fixed;
 	padding: 100px 0;
+}
+.cta-area.dark:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #000;
+	opacity: .7;
 }
 .service-box.service-3 {
 	padding: 0;
@@ -1308,7 +1320,6 @@ section#hero-video {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
 }
 
 section#hero-video:before {
@@ -1334,6 +1345,8 @@ video#heroVid {
   object-fit: cover;
   z-index: -1;
 }
+
+section#hero-video h1 {font-size: 60px;}
 
 
 .hero-perkset span i {color: #FC0000; margin-right: 4px;}

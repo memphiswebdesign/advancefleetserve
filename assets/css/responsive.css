@@ -14,6 +14,8 @@
 /* LG Device :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
 
+section#hero-video h1 {font-size: 52px;}
+
 /*.main-menu ul li {margin-left: 25px;}*/
 
 .wrapper-box.wrapper-padding {
@@ -61,7 +63,7 @@ blockquote {
 /* MD Device :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
 
-section#hero-video h1 {font-size: 33px;} 
+section#hero-video h1 {font-size: 46px;} 
 
 .wrapper-box.wrapper-padding {
 	padding: 0;
@@ -150,6 +152,9 @@ blockquote {
 
 /* Extra small Device. */
 @media (max-width: 767px) {
+
+section#hero-video h1 {font-size: 43px;}
+
 .logo img {height: 28px; margin-left: 12px;}
 .header-top.blue-bg {
 	padding: 10px 0;
@@ -327,9 +332,9 @@ blockquote {
 
 @media only screen and (max-width: 420px) {
 
-	section#hero-video h1 {font-size: 28px;} 
+	section#hero-video h1 {font-size: 30px;} 
 
-	.slider-content h1 {font-size: 28px;}
+	.slider-content h1 {font-size: 30px;}
 
 	.logo img {
 		height: auto!important;
