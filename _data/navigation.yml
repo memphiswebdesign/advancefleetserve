@@ -34,12 +34,16 @@
     url: /mobile-washing
   - text: Emergency Road Service
     url: /emergency-road-service
-- text: Truck & Trailer Sales
-  url: /sales
-- text: Leasing & Rentals
-  url: /lease-rentals
+# - text: Truck & Trailer Sales
+#   url: /sales
+# - text: Truck Center
+#   url: /truck-center
+# - text: Leasing & Rentals
+#   url: /lease-rentals
 - text: Specials
   url: /specials
+- text: News
+  url: /news
 - text: Careers
   url: https://www.indeed.com/cmp/Advance-Trailer-Maintenance-2/
   target: _blank
