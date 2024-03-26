@@ -32,12 +32,14 @@
     url: /trailer-service
   - text: Mobile Washing
     url: /mobile-washing
+  - text: Mobile Fleet Service
+    url: /mobile-fleet-service
   - text: Emergency Road Service
     url: /emergency-road-service
 # - text: Truck & Trailer Sales
 #   url: /sales
-# - text: Truck Center
-#   url: /truck-center
+- text: Truck Center
+  url: /truck-center
 # - text: Leasing & Rentals
 #   url: /lease-rentals
 - text: Specials
