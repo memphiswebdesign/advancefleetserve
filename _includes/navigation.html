@@ -14,7 +14,7 @@
         {% assign active = 'active' %}
     {% endif %}
      
-     <li>
+     <li class="{{ link.text | replace: ' ', '-' | downcase }}">
          <a href="{{link.url}}" target="{{link.target}}">{{link.text}}{% if link.submenu %}<i class="icofont-simple-down"></i>{% endif %}</a>
         {% if link.submenu %}
         <ul class="sub-menu">

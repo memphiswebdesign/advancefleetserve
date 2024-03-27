@@ -1,22 +1,24 @@
 /* XL Device :1200px. */
 @media (min-width: 1200px) and (max-width: 1500px) {
 
-.wrapper-box.wrapper-padding {
-	padding: 0 20px;
+	.wrapper-box.wrapper-padding {
+		padding: 0 20px;
+	}
+
 }
 
-
-
-
-
+@media (min-width: 992px) {
+	.main-menu ul li.news {
+		margin-left: 30px;
+		padding-left: 30px;
+		border-left: 1px solid #aaa;
+	}
 }
 
 /* LG Device :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
 
 section#hero-video h1 {font-size: 52px;}
-
-/*.main-menu ul li {margin-left: 25px;}*/
 
 .wrapper-box.wrapper-padding {
 	padding: 0;
