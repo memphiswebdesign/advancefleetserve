@@ -42,8 +42,8 @@
   url: /truck-center
 # - text: Leasing & Rentals
 #   url: /lease-rentals
-- text: Specials
-  url: /specials
+# - text: Specials
+#   url: /specials
 - text: News
   url: /news
 - text: Careers
