@@ -9,8 +9,8 @@
 
 @media (min-width: 992px) {
 	.main-menu ul li.news {
-		margin-left: 30px;
-		padding-left: 30px;
+		margin-left: 40px;
+		padding-left: 40px;
 		border-left: 1px solid #aaa;
 	}
 }
