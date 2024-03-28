@@ -9,11 +9,11 @@
 
 @media (min-width: 992px) {
 	.main-menu ul li.news {
-		margin-left: 40px;
-		padding-left: 40px;
-		border-left: 1px solid #aaa;
+		margin-left: auto!important;
+/*		padding-left: 40px;*/
+/*		border-left: 1px solid #aaa;*/
 	}
-}
+} 
 
 /* LG Device :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -184,6 +184,11 @@ section#hero-video h1 {font-size: 43px;}
 .slider-bg {
 	height: 420px;
 }
+
+
+blockquote.hero-quote {font-size: 22px;}
+p.hero-quoter {font-size: 14px;}
+
 .about-img img {
 	width: 100%;
 }
@@ -346,6 +351,17 @@ blockquote {
 	#scrollUp {
 		right: 15px;
 		bottom: 15px;
+	}
+
+
+	blockquote.hero-quote {font-size: 17px;}
+	p.hero-quoter {font-size: 13px;}
+
+	.footer-partners span {
+		margin: 0 18px 0 0;
+	}
+	.footer-partners svg {
+		height: 24px;
 	}
 }
 

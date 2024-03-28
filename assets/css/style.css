@@ -309,6 +309,8 @@ label {
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
+	padding: 0 22px;
+	padding-left: 33%;
 }
 
 .main-menu ul li {
@@ -821,7 +823,7 @@ label {
   width: 100%;
   height: 100%;
   background: #000;
-  opacity: .3;
+  opacity: .2;
 }
 
 .features-wrap > * {position: relative; z-index: 2;}
@@ -830,8 +832,9 @@ label {
 .features-wrap h4 {
 	font-weight: 600;
 	color: #fff;
-	margin-bottom: 17px;
+	margin-bottom: 22px;
 	font-size: 18px;
+	text-shadow: 2px 2px 4px rgba(0,0,0,.4);
 }
 .features-wrap p {color: #fff;}
 .features-wrap a {
@@ -1330,7 +1333,7 @@ section#hero-video:before {
 	right: 0;
 	bottom: 0;
 	background: #222;
-	opacity: .33;
+	opacity: .2;
 }
 
 video#heroVid {
@@ -1358,14 +1361,13 @@ blockquote.hero-quote {
 	color: #fff;
 	font-size: 28px;
 	font-style: italic;
-	margin: 0 0 .3em 0;
+	margin: 0;
 	text-shadow: 2px 2px 4px rgba(0,0,0,.4);
 }
 p.hero-quoter {
 	color: #fff!important;
 	font-size: 16px;
 	font-weight: 500;
-	margin: 0 0 3em 0;
 	text-shadow: 2px 2px 4px rgba(0,0,0,.4);
 }
 
@@ -1441,14 +1443,30 @@ p.hero-quoter {
 	background-position: 100% 100%;
 }
 .footer-logo {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 .footer-text p {
-	margin-bottom: 30px;
+	margin-bottom: 25px;
 	font-size: 17px;
 	line-height: 1.4em;
 	color: #878787;
 }
+
+.footer-partners {
+	display: flex;
+	align-items: start;
+	margin: 0 0 2em 0;
+}
+.footer-partners span {
+	margin: 0 35px 0 0;
+	transform-origin: top left;
+}
+.footer-partners span:last-child {margin: 0;}
+.footer-partners svg {
+	display: inline-block;
+	height: 33px;
+}
+
 .footer-social-icon span {
 	color: #fff;
 	display: block;
