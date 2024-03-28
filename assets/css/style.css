@@ -821,7 +821,7 @@ label {
   width: 100%;
   height: 100%;
   background: #000;
-  opacity: .5;
+  opacity: .3;
 }
 
 .features-wrap > * {position: relative; z-index: 2;}
@@ -1313,9 +1313,9 @@ label {
 section#hero-video {
 	position: relative;
 	overflow: hidden;
-	padding-top: 180px;
-	padding-bottom: 150px;
-	height: 60vh;
+	padding-top: 220px;
+	padding-bottom: 180px;
+	height: 70vh;
 	min-height: 500px;
 	display: flex;
 	flex-direction: column;
@@ -1330,7 +1330,7 @@ section#hero-video:before {
 	right: 0;
 	bottom: 0;
 	background: #222;
-	opacity: .45;
+	opacity: .33;
 }
 
 video#heroVid {
@@ -1348,9 +1348,26 @@ video#heroVid {
 
 section#hero-video h1 {font-size: 60px;}
 
-
+.hero-perkset {text-shadow: 2px 2px 4px rgba(0,0,0,.4);}
 .hero-perkset span i {color: #FC0000; margin-right: 4px;}
 
+blockquote.hero-quote {
+	border: none!important;
+	font-weight: 400;
+	padding: 0;
+	color: #fff;
+	font-size: 28px;
+	font-style: italic;
+	margin: 0 0 .3em 0;
+	text-shadow: 2px 2px 4px rgba(0,0,0,.4);
+}
+p.hero-quoter {
+	color: #fff!important;
+	font-size: 16px;
+	font-weight: 500;
+	margin: 0 0 3em 0;
+	text-shadow: 2px 2px 4px rgba(0,0,0,.4);
+}
 
 
 /* Pre Footer - Partnership Logos */
