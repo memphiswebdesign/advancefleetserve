@@ -26,7 +26,7 @@
     {% if page.description %}<meta name="twitter:description" content="{{ page.description }}">{% else %}<meta name="twitter:description" content="{{ site.description }}">{% endif %}
     {% if page.post_image %}<meta name="twitter:card"  content="summary_large_image"><meta name="twitter:image" content="{{ site.url }}{{ page.post_image }}">{% else %}<meta name="twitter:card"  content="summary"><meta name="twitter:image" content="{{ site.cover_image }}">{% endif %}
     <!-- Site Title -->
-    <title>{% if page.title %} {{page.title}} {% else %} {{site.title}} {% endif %}</title>
+    <title>{{page.title}} | {{site.title}}</title>
     <link rel="icon" href="{{site.baseurl}}/assets/img/favicon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/bootstrap.min.css">
@@ -41,7 +41,6 @@
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/default.css">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/style.css">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/responsive.css">
-    <title>{{site.title}}</title>
     {% feed_meta %}
 </head>
 
