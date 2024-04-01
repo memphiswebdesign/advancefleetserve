@@ -763,15 +763,17 @@ label {
 	background: #FC0000;
 }
 /* 4. About */
+.section-title h1,
 .section-title h2 {
 	position: relative;
-	margin-bottom: 45px;
+	margin-bottom: 1.35em;
 	display: inline-block;
 	font-weight: 600;
 }
 .post-comments .section-title h2 {
 	margin-bottom: 15px;
 }
+.section-title h1::before,
 .section-title h2::before {
 	content: "";
 	position: absolute;
@@ -779,10 +781,10 @@ label {
 	width: 60px;
 	height: 2px;
 	background: #FC0000;
-	bottom: -25px;
+	bottom: -.5em;
 }
 .section-title.service-title p {
-	padding: 0 190px;
+	padding: 0 180px;
 	margin-bottom: 10px;
 }
 .about-info-text h2 {
@@ -861,6 +863,7 @@ label {
 	padding: 20px;
 	padding-top: 0px;
 }
+.service-title h1::before,
 .service-title h2::before {
 	content: "";
 	position: absolute;
