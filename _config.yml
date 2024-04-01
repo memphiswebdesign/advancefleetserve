@@ -27,6 +27,7 @@ plugins:
   - jekyll-archives
 
 cover_image: "/assets/img/afs-banner.png"
+cover_image2: "/assets/img/slider/semi-hero.jpg"
 
 
 #collections
