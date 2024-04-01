@@ -26,7 +26,7 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-archives
 
-cover_image: "/assets/img/banner.png"
+cover_image: "/assets/img/afs-banner.png"
 
 
 #collections
