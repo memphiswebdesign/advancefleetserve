@@ -8,15 +8,36 @@
   });
 
 
-  // sticky
+  // sticky nav
+  // var wind = $(window);
+  // var stickyNav = $('#sticky-header');
+  // var pageMain = $('#afs-site');
+  // wind.on('scroll', function () {
+  //   var scroll = wind.scrollTop();
+  //   if (scroll < 180) {
+  //     stickyNav.removeClass('sticky');
+  //     pageMain.removeClass('scrollOffset');
+  //   } else {
+  //     stickyNav.addClass('sticky');
+  //     pageMain.addClass('scrollOffset');
+  //   }
+  // });
+
+  // sticky nav with dynamic offset based on logo area
   var wind = $(window);
-  var sticky = $('#sticky-header');
+  var stickyNav = $('#sticky-header');
+  var pageMain = $('#afs-site');
+
   wind.on('scroll', function () {
     var scroll = wind.scrollTop();
-    if (scroll < 180) {
-      sticky.removeClass('sticky');
+
+    if (scroll < 40) {
+      stickyNav.removeClass('sticky');
+      pageMain.removeClass('scrollOffset').css('margin-top', '');
     } else {
-      sticky.addClass('sticky');
+      var logoAreaHeight = $('#sticky-header .logo-area').outerHeight();
+      stickyNav.addClass('sticky');
+      pageMain.addClass('scrollOffset').css('margin-top', logoAreaHeight + 'px');
     }
   });
 
