@@ -141,7 +141,23 @@ ul {
 li {
 	list-style: none
 }
-p {
+ul.markers {
+}
+ul.markers li {
+	position: relative;
+	padding-left: 18px;
+	margin-bottom: 12px;
+}
+ul.markers li:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 12px;
+	width: 10px;
+	height: 2px;
+	background: red;
+}
+main p, main ul, main li {
 	font-size: 15.5px;
 	font-weight: normal;
 	line-height: 1.6em;
@@ -149,10 +165,10 @@ p {
 	margin-bottom: 1em;
 }
 @media (min-width: 768px) {
-	p {font-size: 16.25px;}
+	main p, main ul, main li {font-size: 16.25px;}
 }
 @media (min-width: 991px) {
-	p {font-size: 17px;}
+	main p, main ul, main li {font-size: 17px;}
 }
 hr {
 	border-bottom: 1px solid #eceff8;
@@ -1589,6 +1605,7 @@ p.hero-quoter {
 	background-size: cover;
 	background-position: center;
 /*	background-attachment: fixed;*/
+	background-repeat: no-repeat;
 	height: 300px;
 	display: flex;
 	align-items: center;
@@ -1603,6 +1620,11 @@ p.hero-quoter {
 	bottom: 0;
 	background: #111;
 	opacity: .65;
+}
+
+.breadcrumb-area.brandt-partner {
+	background-image: url('/assets/img/bg/grate-texture-dark.webp')!important;
+	background-position: top center;
 }
 
 .breadcrumb {
@@ -2216,3 +2238,30 @@ blockquote {
 	padding-left: 0;
 	padding-right: 0;
 }
+
+/*Brandt page*/
+#intakeForm {
+	position: relative;
+	background-color: #000;
+	background-image: url('/assets/img/bg/grate-texture-dark.webp')!important;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#intakeForm:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	opacity: .25;
+}
+#intakeForm > .container {position: relative ;z-index: 10;}
+
+#intakeForm h2,
+#intakeForm p,
+#intakeForm form label {color: #fff!important;}
+
+

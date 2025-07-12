@@ -25,7 +25,7 @@
     url: /trailer-parts
 - text: Services
   url: /truck-service
-  submenu: 
+  submenu:
   - text: Truck Service
     url: /truck-service
   - text: Trailer Service
@@ -34,8 +34,15 @@
     url: /mobile-washing
   - text: Mobile Fleet Service
     url: /mobile-fleet-service
+  - text: Boom & Rigging Inspections
+    url: /boom-rigging-inspections
   - text: Emergency Road Service
     url: /emergency-road-service
+- text: Brands
+  url: /brandt
+  submenu:
+  - text: Brandt
+    url: /brandt
 # - text: Truck & Trailer Sales
 #   url: /sales
 - text: Truck Center
