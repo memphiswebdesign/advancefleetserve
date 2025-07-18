@@ -10,12 +10,14 @@
 - text: About
   url: /about-us
   submenu:
-  - text: About Us
+  - text: Mission & Values
     url: /about-us
-  - text: Our Team
+  - text: Our Team & Culture
     url: /team
   - text: Locations
     url: /contact#locations
+  - text: Advance Solutions
+    url: /advance-solutions
 - text: Parts
   url: /truck-parts
   submenu:
