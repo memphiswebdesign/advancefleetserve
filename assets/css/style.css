@@ -1607,11 +1607,13 @@ p.hero-quoter {
 /*	background-attachment: fixed;*/
 	background-repeat: no-repeat;
 	height: 300px;
-	display: flex;
-	align-items: center;
+	background: #fff;
+	box-shadow: 0 1px 0 rgba(32,32,32,.1);
+	/*display: flex;*/
+	/*align-items: center;*/
 }
 
-.breadcrumb-area:before {
+/*.breadcrumb-area:before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -1620,12 +1622,12 @@ p.hero-quoter {
 	bottom: 0;
 	background: #111;
 	opacity: .65;
-}
+}*/
 
-.breadcrumb-area.brandt-partner {
+/*.breadcrumb-area.brandt-partner {
 	background-image: url('/assets/img/bg/grate-texture-dark.webp')!important;
 	background-position: top center;
-}
+}*/
 
 .breadcrumb {
 	display: -webkit-box;
@@ -1643,8 +1645,12 @@ p.hero-quoter {
 	margin: 0;
 	text-transform: uppercase;
 	font-weight: 600;
-	color: #fff;
+	color: #000;
 }
+@media (max-width: 992px) { .breadcrumb-title h2 {font-size: 1.8rem;} }
+@media (max-width: 768px) { .breadcrumb-title h2 {font-size: 1.4rem; text-align: center;}  }
+@media (max-width: 480px) { .breadcrumb-title h2 {font-size: 1rem;}  }
+ 
 .breadcrumb li {
 	display: inline-block;
 }
@@ -1662,6 +1668,67 @@ p.hero-quoter {
 	content: "/";
 	color: #c5c5c5;
 }
+
+.breadcrumb-hero {
+	display: flex;
+	height: 100%;
+	flex-wrap: nowrap;
+	overflow: hidden;
+}
+
+@media (max-width: 768px) {
+	.breadcrumb-hero {flex-direction: column;}
+}
+
+.breadcrumb-title {
+	flex: 1 0 25%;
+	padding: 0 2% 0 1%;
+}
+.breadcrumb-art {flex: 1 0 75%;}
+
+.breadcrumb-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.breadcrumb-art {
+	background: pink;
+	position: relative;
+	height: 100%;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.breadcrumb-art:before {
+	content: ""; 
+	position: absolute;
+	top: 0;
+	left: -2px;
+	bottom: 0; 
+	width: 30%;
+	background-image: url('data:image/svg+xml,<svg width="172" height="300" viewBox="0 0 172 300" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H104.5L4.5 300H0V0Z" fill="white"/><path d="M116.5 0H124.5L24.5 300H16.5L116.5 0Z" fill="white"/><path d="M137.5 0H147.5L47.5 300H37.5L137.5 0Z" fill="white"/><path d="M159.5 0H171.5L71.5 300H59.5L159.5 0Z" fill="white"/></svg>');
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	z-index: 2;
+}
+.breadcrumb-art:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #111;
+	opacity: .4;
+}
+
+@media (max-width: 768px) {
+	.breadcrumb-art:before {width: 100%;}
+}
+
+
 /* 13. Contact */
 .contact-person h4 {
 	margin-bottom: 10px;
