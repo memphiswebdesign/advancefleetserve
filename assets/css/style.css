@@ -1108,7 +1108,7 @@ main#afs-site {
 	font-size: 48px;
 	color: #FC0000;
 }
-.counter{
+.counter {
 	color: #fff;
 	display: block;
 	font-family: "Michroma", sans-serif;
@@ -1117,9 +1117,8 @@ main#afs-site {
 	margin-bottom: 0;
 	margin-top: 7px;
 }
-.single-counter> p{
+.single-counter > p{
 	color: #ddd;
-	font-size: 16px;
 	margin: 0;
 	text-transform: capitalize;
 	font-weight: 500;
