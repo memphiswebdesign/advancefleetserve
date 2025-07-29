@@ -24,20 +24,31 @@
   // });
 
   // sticky nav with dynamic offset based on logo area
-  var wind = $(window);
-  var stickyNav = $('#sticky-header');
-  var pageMain = $('#afs-site');
+  // var wind = $(window);
+  // var stickyNav = $('#sticky-header');
+  // var pageMain = $('#afs-site');
 
-  wind.on('scroll', function () {
-    var scroll = wind.scrollTop();
+  // wind.on('scroll', function () {
+  //   var scroll = wind.scrollTop();
 
-    if (scroll < 40) {
-      stickyNav.removeClass('sticky');
-      pageMain.removeClass('scrollOffset').css('margin-top', '');
-    } else {
-      var logoAreaHeight = $('#sticky-header .logo-area').outerHeight();
-      stickyNav.addClass('sticky');
-      pageMain.addClass('scrollOffset').css('margin-top', logoAreaHeight + 'px');
+  //   if (scroll < 40) {
+  //     stickyNav.removeClass('sticky');
+  //     pageMain.removeClass('scrollOffset').css('margin-top', '');
+  //   } else {
+  //     var logoAreaHeight = $('#sticky-header .logo-area').outerHeight();
+  //     stickyNav.addClass('sticky');
+  //     pageMain.addClass('scrollOffset').css('margin-top', logoAreaHeight + 'px');
+  //   }
+  // });
+
+  // Nav / Main content offset
+  document.addEventListener("DOMContentLoaded", function () {
+    const stickyHeader = document.querySelector("#sticky-header");
+    const mainContent = document.querySelector("main#afs-site");
+
+    if (stickyHeader && mainContent) {
+      const headerHeight = stickyHeader.offsetHeight;
+      mainContent.style.marginTop = `${headerHeight}px`;
     }
   });
 
