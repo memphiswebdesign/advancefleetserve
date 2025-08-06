@@ -42,11 +42,11 @@
     url: /dielectric-testing
   - text: Emergency Road Service
     url: /emergency-road-service
-# - text: Brands
-#   url: /brandt
-#   submenu:
-#   - text: Brandt
-#     url: /brandt
+- text: Brands
+  url: /brandt
+  submenu:
+  - text: Brandt
+    url: /brandt
 # - text: Truck & Trailer Sales
 #   url: /sales
 - text: Truck Center

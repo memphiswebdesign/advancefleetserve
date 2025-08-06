@@ -1607,15 +1607,16 @@ p.hero-quoter {
     align-items: center;
     justify-content: center;
 }
-.facebook-bg{
-	background: #3B5998;
-}
-.twitter-bg{
-	background: #555;
-}
-.google-bg{
-	background: #DD4B39;
-}
+.facebook-bg{background: #3B5998;}
+.twitter-bg{background: #555;}
+.google-bg{background: #DD4B39;}
+.linkedin-bg{background: #0A66C2;}
+.instagram-bg{background: linear-gradient(135deg, 
+  #fdf497 0%, 
+  #fd5949 35%, 
+  #d6249f 60%, 
+  #285AEB 100%);}
+
 .footer-widget-heading h3 {
 	color: #fff;
 	font-size: 16px;
