@@ -645,6 +645,11 @@
 .f-400{font-weight: 400;}
 .f-300{font-weight: 300;}
 
+/* font sizes */
+.fs-100 {font-size: 100%;}
+.fs-110 {font-size: 110%;}
+.fs-120 {font-size: 120%;}
+
 /* Background Color */
 
 .grey-bg {
@@ -689,7 +694,8 @@
 .red-color {
 	color: #FC0000;
 }
-.haz-color {color: #777;}
+.haz-color {color: #777!important;}
+.gray-color {color: #aaa!important;}
 .theme-color {
 	color: #222;
 }
