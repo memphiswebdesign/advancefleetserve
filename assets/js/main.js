@@ -53,97 +53,238 @@
   });
 
   // Video Lightbox
+  // (function () {
+  //   const overlay  = document.getElementById('videoLightbox');
+  //   const host     = document.getElementById('videoHost');
+  //   const closeBtn = overlay.querySelector('.video-close');
+  //   let lastTrigger = null;
+
+  //   function makeSrc({ wistiaId, ytId, vimeoId, start=0, muted=false }) {
+  //     if (wistiaId) {
+  //       const params = new URLSearchParams({
+  //         autoplay: '1',
+  //         muted: muted ? '1' : '0',
+  //         controlsVisibleOnLoad: 'true',
+  //         playbar: 'true',
+  //         volumeControl: 'true',
+  //         smallPlayButton: 'true',
+  //       });
+  //       if (start > 0) params.set('start', String(start));
+  //       return `https://fast.wistia.net/embed/iframe/${encodeURIComponent(wistiaId)}?${params.toString()}`;
+  //     }
+  //     if (ytId) {
+  //       const params = new URLSearchParams({
+  //         autoplay: '1',
+  //         rel: '0',
+  //         modestbranding: '1',
+  //         playsinline: '1'
+  //       });
+  //       if (muted) params.set('mute', '1');
+  //       if (start > 0) params.set('start', String(start));
+  //       return `https://www.youtube.com/embed/${encodeURIComponent(ytId)}?${params.toString()}`;
+  //     }
+  //     if (vimeoId) {
+  //       const params = new URLSearchParams({
+  //         autoplay: '1',
+  //         title: '0',
+  //         byline: '0',
+  //         portrait: '0'
+  //       });
+  //       if (muted) params.set('muted', '1');
+  //       if (start > 0) params.set('#t', `${start}s`); // Vimeo start via fragment
+  //       return `https://player.vimeo.com/video/${encodeURIComponent(vimeoId)}?${params.toString()}`;
+  //     }
+  //     return '';
+  //   }
+
+  //   function openLightboxFromTrigger(triggerEl) {
+  //     if (!triggerEl) return;
+  //     lastTrigger = triggerEl;
+
+  //     const wistiaId = triggerEl.getAttribute('data-wistia-id');
+  //     const ytId     = triggerEl.getAttribute('data-youtube-id') || triggerEl.getAttribute('data-yt-id');
+  //     const vimeoId  = triggerEl.getAttribute('data-vimeo-id');
+  //     const start    = parseInt(triggerEl.getAttribute('data-start') || '0', 10);
+  //     const muted    = (triggerEl.getAttribute('data-muted') || '').toLowerCase() === 'true';
+
+  //     const src = makeSrc({ wistiaId, ytId, vimeoId, start, muted });
+  //     if (!src) return;
+
+  //     host.innerHTML = '';
+  //     const iframe = document.createElement('iframe');
+  //     iframe.src = src;
+  //     iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+  //     iframe.allowFullscreen = true;
+  //     host.appendChild(iframe);
+
+  //     overlay.classList.add('open');
+  //     overlay.setAttribute('aria-hidden', 'false');
+  //     closeBtn.focus();
+  //   }
+
+  //   function closeLightbox() {
+  //     overlay.classList.remove('open');
+  //     overlay.setAttribute('aria-hidden', 'true');
+  //     host.innerHTML = '';
+  //     if (lastTrigger && typeof lastTrigger.focus === 'function') lastTrigger.focus();
+  //   }
+
+  //   // Delegated click for triggers
+  //   document.addEventListener('click', (e) => {
+  //     const trigger = e.target.closest('[data-wistia-id], [data-youtube-id], [data-yt-id], [data-vimeo-id]');
+  //     if (!trigger) return;
+  //     e.preventDefault();
+  //     openLightboxFromTrigger(trigger);
+  //   });
+
+  //   overlay.addEventListener('click', (e) => { if (e.target === overlay) closeLightbox(); });
+  //   closeBtn.addEventListener('click', closeLightbox);
+  //   document.addEventListener('keydown', (e) => {
+  //     if (e.key === 'Escape' && overlay.classList.contains('open')) closeLightbox();
+  //   });
+
+  // })();
+  // Video Lightbox END
+
+
   (function () {
-    const overlay  = document.getElementById('videoLightbox');
-    const host     = document.getElementById('videoHost');
-    const closeBtn = overlay.querySelector('.video-close');
-    let lastTrigger = null;
+  const overlay  = document.getElementById('videoLightbox');
+  const host     = document.getElementById('videoHost');
+  const closeBtn = overlay.querySelector('.video-close');
+  let lastTrigger = null;
 
-    function makeSrc({ wistiaId, ytId, vimeoId, start=0, muted=false }) {
-      if (wistiaId) {
-        const params = new URLSearchParams({
-          autoplay: '1',
-          muted: muted ? '1' : '0',
-          controlsVisibleOnLoad: 'true',
-          playbar: 'true',
-          volumeControl: 'true',
-          smallPlayButton: 'true',
-        });
-        if (start > 0) params.set('start', String(start));
-        return `https://fast.wistia.net/embed/iframe/${encodeURIComponent(wistiaId)}?${params.toString()}`;
+  // (new) parse optional full URLs for convenience
+  function parseVideoUrl(urlLike) {
+    try {
+      const u = new URL(urlLike, location.href);
+      const host = u.hostname.toLowerCase();
+
+      if (host.includes('vimeo')) {
+        const m = u.pathname.match(/\/video\/(\d+)/);
+        if (m) return { vimeoId: m[1], vimeoH: u.searchParams.get('h') || null };
       }
-      if (ytId) {
-        const params = new URLSearchParams({
-          autoplay: '1',
-          rel: '0',
-          modestbranding: '1',
-          playsinline: '1'
-        });
-        if (muted) params.set('mute', '1');
-        if (start > 0) params.set('start', String(start));
-        return `https://www.youtube.com/embed/${encodeURIComponent(ytId)}?${params.toString()}`;
+      if (host.includes('youtube') || host.includes('youtu.be')) {
+        let ytId = u.searchParams.get('v');
+        if (!ytId && host.includes('youtu.be')) ytId = u.pathname.split('/').pop();
+        return { ytId, start: parseInt(u.searchParams.get('start') || '0', 10) || 0 };
       }
-      if (vimeoId) {
-        const params = new URLSearchParams({
-          autoplay: '1',
-          title: '0',
-          byline: '0',
-          portrait: '0'
-        });
-        if (muted) params.set('muted', '1');
-        if (start > 0) params.set('#t', `${start}s`); // Vimeo start via fragment
-        return `https://player.vimeo.com/video/${encodeURIComponent(vimeoId)}?${params.toString()}`;
+      if (host.includes('wistia')) {
+        const m = u.pathname.match(/(?:medias|iframe)\/([^/?#]+)/);
+        if (m) return { wistiaId: m[1] };
       }
-      return '';
+    } catch (_) {}
+    return {};
+  }
+
+  function makeSrc({ wistiaId, ytId, vimeoId, vimeoH, start = 0, muted = false }) {
+    if (wistiaId) {
+      const q = new URLSearchParams({
+        autoplay: '1',
+        muted: muted ? '1' : '0',
+        controlsVisibleOnLoad: 'true',
+        playbar: 'true',
+        volumeControl: 'true',
+        smallPlayButton: 'true'
+      });
+      if (start > 0) q.set('start', String(start));
+      return `https://fast.wistia.net/embed/iframe/${encodeURIComponent(wistiaId)}?${q.toString()}`;
     }
 
-    function openLightboxFromTrigger(triggerEl) {
-      if (!triggerEl) return;
-      lastTrigger = triggerEl;
-
-      const wistiaId = triggerEl.getAttribute('data-wistia-id');
-      const ytId     = triggerEl.getAttribute('data-youtube-id') || triggerEl.getAttribute('data-yt-id');
-      const vimeoId  = triggerEl.getAttribute('data-vimeo-id');
-      const start    = parseInt(triggerEl.getAttribute('data-start') || '0', 10);
-      const muted    = (triggerEl.getAttribute('data-muted') || '').toLowerCase() === 'true';
-
-      const src = makeSrc({ wistiaId, ytId, vimeoId, start, muted });
-      if (!src) return;
-
-      host.innerHTML = '';
-      const iframe = document.createElement('iframe');
-      iframe.src = src;
-      iframe.allow = 'autoplay; fullscreen; picture-in-picture';
-      iframe.allowFullscreen = true;
-      host.appendChild(iframe);
-
-      overlay.classList.add('open');
-      overlay.setAttribute('aria-hidden', 'false');
-      closeBtn.focus();
+    if (ytId) {
+      const q = new URLSearchParams({
+        autoplay: '1',
+        rel: '0',
+        modestbranding: '1',
+        playsinline: '1'
+      });
+      if (muted) q.set('mute', '1');
+      if (start > 0) q.set('start', String(start));
+      return `https://www.youtube.com/embed/${encodeURIComponent(ytId)}?${q.toString()}`;
     }
 
-    function closeLightbox() {
-      overlay.classList.remove('open');
-      overlay.setAttribute('aria-hidden', 'true');
-      host.innerHTML = '';
-      if (lastTrigger && typeof lastTrigger.focus === 'function') lastTrigger.focus();
+    if (vimeoId) {
+      // IMPORTANT: include privacy hash (&h=...) when present
+      const q = new URLSearchParams({
+        autoplay: '1',
+        title: '0',
+        byline: '0',
+        portrait: '0',
+        muted: muted ? '1' : '0'
+      });
+      const base = `https://player.vimeo.com/video/${encodeURIComponent(vimeoId)}`;
+      const hashParam = vimeoH ? `&h=${encodeURIComponent(vimeoH)}` : '';
+      // Vimeo uses a fragment for start time (NOT a query param)
+      const frag = start > 0 ? `#t=${start}s` : '';
+      return `${base}?${q.toString()}${hashParam}${frag}`;
     }
 
-    // Delegated click for triggers
-    document.addEventListener('click', (e) => {
-      const trigger = e.target.closest('[data-wistia-id], [data-youtube-id], [data-yt-id], [data-vimeo-id]');
-      if (!trigger) return;
-      e.preventDefault();
-      openLightboxFromTrigger(trigger);
-    });
+    return '';
+  }
 
-    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeLightbox(); });
-    closeBtn.addEventListener('click', closeLightbox);
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && overlay.classList.contains('open')) closeLightbox();
-    });
+  function openLightboxFromTrigger(triggerEl) {
+    if (!triggerEl) return;
+    lastTrigger = triggerEl;
 
-  })();
+    // read attributes
+    let wistiaId = triggerEl.getAttribute('data-wistia-id');
+    let ytId     = triggerEl.getAttribute('data-youtube-id') || triggerEl.getAttribute('data-yt-id');
+    let vimeoId  = triggerEl.getAttribute('data-vimeo-id');
+    let vimeoH   = triggerEl.getAttribute('data-vimeo-h'); // NEW: privacy hash support
+    let start    = parseInt(triggerEl.getAttribute('data-start') || '0', 10) || 0;
+    const muted  = (triggerEl.getAttribute('data-muted') || '').toLowerCase() === 'true';
+
+    // optional: allow full URL via data-video-url
+    const urlAttr = triggerEl.getAttribute('data-video-url');
+    if (urlAttr) {
+      const parsed = parseVideoUrl(urlAttr);
+      wistiaId = wistiaId || parsed.wistiaId || null;
+      ytId     = ytId     || parsed.ytId     || null;
+      vimeoId  = vimeoId  || parsed.vimeoId  || null;
+      vimeoH   = vimeoH   || parsed.vimeoH   || null;
+      if (!triggerEl.hasAttribute('data-start') && parsed.start != null) {
+        start = parsed.start;
+      }
+    }
+
+    const src = makeSrc({ wistiaId, ytId, vimeoId, vimeoH, start, muted });
+    if (!src) return;
+
+    host.innerHTML = '';
+    const iframe = document.createElement('iframe');
+    iframe.src = src;
+    iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+    iframe.allowFullscreen = true;
+    host.appendChild(iframe);
+
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    closeBtn.focus();
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    host.innerHTML = '';
+    if (lastTrigger && typeof lastTrigger.focus === 'function') lastTrigger.focus();
+  }
+
+  // Delegated click for triggers
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('[data-wistia-id], [data-youtube-id], [data-yt-id], [data-vimeo-id], [data-video-url]');
+    if (!trigger) return;
+    e.preventDefault();
+    openLightboxFromTrigger(trigger);
+  });
+
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeLightbox(); });
+  closeBtn.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) closeLightbox();
+  });
+})();
+
+
+// -------------
 
   // offcanvas menu
   $(".menu-tigger").on("click", function() {
