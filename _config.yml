@@ -5,7 +5,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 facebook_url: https://www.facebook.com/AdvanceFleetServicesLLC
-# twitter_url: https://twitter.com/tryghost
+twitter_url: https://x.com/AdvanceFleetSer
 # github_url:  https://github.com/TryGhost/Ghost
 # pinterest_url: https://www.pinterest.com/rubel8525
 linkedin_url: https://www.linkedin.com/company/advance-fleet-services

@@ -141,8 +141,7 @@ ul {
 li {
 	list-style: none
 }
-ul.markers {
-}
+ul.markers {}
 ul.markers li {
 	position: relative;
 	padding-left: 18px;
@@ -155,8 +154,10 @@ ul.markers li:before {
 	top: 12px;
 	width: 10px;
 	height: 2px;
-	background: red;
+	background: #FC0000;
 }
+ul.markers.sm li {font-size: 14.5px; margin-bottom: 4px}
+
 main p, main ul, main li {
 	font-size: 16px;
 	font-weight: normal;
@@ -368,7 +369,11 @@ label {
 	justify-content: center;
 	margin: 0 auto;
 	padding: 0 22px;
-	padding-left: 33%;
+	padding-left: 30%;
+}
+
+@media (max-width: 1200px) {
+	.main-menu ul.top-level {padding-left: 3%;}
 }
 
 .main-menu ul li {
@@ -514,6 +519,7 @@ label {
 	-webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
 	transition: 200ms ease-out;
 }
+
 /*.sticky .logo-area {
 	display: none;
 }*/ 
@@ -2570,3 +2576,62 @@ width:100%; height:100%; display:block; border:0;
 	z-index: 10;
 }
 
+.feature-scroll {}
+.feature-scroll h5 {
+	font-family: "Noto Sans", sans-serif;
+	font-weight: 500;
+	color: #fff;
+	margin-bottom: 0.4em;
+	margin-top: .8em;
+}
+.feature-scroll p {
+	font-size: 14.3px;
+	line-height: 1.35em;
+	color: #aaa;
+}
+
+/* Owl */
+.owl-carousel {padding-left: 10px; padding-right: 10px;}
+.owl-nav {
+	margin: 0.4em 0;
+	display: flex;
+	justify-content: center;
+}
+.owl-nav button {
+	cursor: pointer;
+	margin: 0 .4em;
+}
+.owl-nav button span {
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	font-size: 30px;
+	line-height: .65;
+	background: rgba(170,170,170,.7);
+	color: #fff;
+}
+
+.owl-dots {
+	display: flex;
+	justify-content: center;
+}
+.owl-dots button.owl-dot {
+	cursor: pointer;
+	margin: 0 .4em;
+}
+.owl-dots button.owl-dot span {
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	/*background: rgba(170,170,170,.7);*/
+	border-radius: 50%;
+	border: 1px solid #FC0000;
+	transform-origin: center;
+}
+.owl-dots button.owl-dot:hover span,
+.owl-dots button.owl-dot.active span {background: #FC0000;}
+.owl-dots button.owl-dot.active span {transform: scale(1.2);}
+
+.owl-theme-dark {}
+
+.owl-no-nav .owl-nav {display: none;}

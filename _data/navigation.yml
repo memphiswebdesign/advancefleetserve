@@ -47,6 +47,10 @@
   submenu:
   - text: Brandt
     url: /brandt
+  - text: ↳ Heavy Haul Trailers
+    url: /brandt/heavy-haul
+  - text: ↳ Utility Trailers
+    url: /brandt/utility-trailers
 # - text: Truck & Trailer Sales
 #   url: /sales
 - text: Truck Center
