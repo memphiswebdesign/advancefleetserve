@@ -3,6 +3,18 @@ layout: page
 title: Tilt Deck Trailers
 permalink: /brandt/tilt-deck-trailers
 featuredImage: /assets/img/brandt/brandt-tiltdeck-trailer.webp
+gallery_images:
+  - TiltDeck-Gallery-1.jpg
+  - TiltDeck-Gallery-2.jpg
+  - TiltDeck-Gallery-3.jpg
+  - TiltDeck-Gallery-4.jpg
+  - ProductPage-TiltDeck-Gallery-1.jpg
+  - ProductPage-TiltDeck-Gallery-2.jpg
+  - ProductPage-TiltDeck-Gallery-3.jpg
+  - ProductPage-TiltDeck-Gallery-4.jpg
+  - ProductPage-TiltDeck-Gallery-5.jpg
+  - ProductPage-TiltDeck-Gallery-6.jpg
+  - ProductPage-TiltDeck-Gallery-7.jpg
 ---
 
 <style>
@@ -147,66 +159,75 @@ html { scroll-behavior: smooth; }
     </div>
 </section>
 
-<div class="grey-bg container pt-0 pb-0 mb-5">
-  <div class="row">
-    <div class="col-12 pt-5 mb-0 text-center">
-      <h3>Multiple Configurations</h3>
-      <p>Brandt delivers different trim levels so you can tailor your trailer for your exact operational needs.</p>
-    </div>
-    <div class="col-xl-6 col-lg-6 mb-10">
-      <img class="img-fluid px-3 px-md-5" src="/assets/img/brandt/TiltDeck-Performance-Model.webp" />
-        <h5 class="mb-2">Performance Model</h5>
-        <ul class="markers sm">
-          <li>Patented Lode N loc auto latch tilt deck system.</li>
-          <li>Tandem 7,000 lbs axles.</li>
-          <li>Deck width inside, fender to fender of 81.5".</li>
-          <li>Pressure treated pine / spruce decking and premium fir decking.</li>
-          <li>Expanded metal mesh deck grip in option.</li>
-          <li>Tool trail and toolbox with lid.</li>
-        </ul>
-        <a class="text-btn" href="#form">Request a Quote ↴</a>
-    </div>
-    <div class="col-xl-6 col-md-6 mt-0 mb-20 md-margin">
-        <img class="img-fluid px-3 px-md-5" src="/assets/img/brandt/TiltDeck-Premium-Model.webp" />
-        <h5 class="mb-2">Premium Model</h5>
-        <ul class="markers sm">
-          <li>Patented Lode N loc auto latch tilt deck system.</li>
-          <li>Tandem 8,000 lbs axles.</li>
-          <li>Deck width inside, fender to fender of 82.5".</li>
-          <li>Premium Fir Decking.</li>
-          <li>Expanded metal mesh deck grip.</li>
-          <li>Toolbox with lid.</li>
-          <li>Pallet fork holders.</li>
-          <li>Spare tire carrier & spare tire.</li>
-        </ul>
-        <a class="text-btn" href="#form">Request a Quote ↴</a>
-    </div>
-  </div>
-</div>
-
-<div class="container mb-5">
-  <div class="counter-area pb-80 pt-80 px-3 px-md-5" style="background-image:url('/assets/img/brandt/brandt-galvanized-punch.webp'); background-attachment: local;">
+<section class="grey-bg">
+  <div class="container py-5">
     <div class="row">
-        <div class="col-12 z-index">
-          <div class="single-counter text-center mb-30">
-            <h5 class="mt-4 white-color">HIGH QUALITY ASSERTED BY THE BEST WARRANTY IN THE INDUSTRY.</h5>
-            <p class="fs-110 font-weight-normal">Two-years bumper-to-bumper and five-year structural warranty covers all components is the best coverage in the business.</p>
-          </div>
-        </div>
+      <div class="col-12 pt-4 mb-0 text-center">
+        <h3>Multiple Configurations</h3>
+        <p>Brandt delivers different trim levels so you can tailor your trailer for your exact operational needs.</p>
       </div>
-  </div>
-</div>
-
-
-<section class="grey-bg py-3 text-center" style="border-top: 1px solid #eee;">
-  <div class="container">
-    <div class="row">
-      <p class="text-center my-0 px-2" style="width: 100%; color: #888; font-style: italic; font-size: 13px;">Brandt partner assets & content from <a style="color: #888; text-decoration: underline;" href="https://www.brandt.ca/Divisions/Tractor/Products/Trailers" target="_blank">Brandt.ca</a></p>
+      <div class="col-xl-6 col-lg-6 mb-10">
+        <img class="img-fluid px-3 px-md-5" src="/assets/img/brandt/TiltDeck-Performance-Model.webp" />
+          <h5 class="mb-2">Performance Model</h5>
+          <ul class="markers sm">
+            <li>Patented Lode N loc auto latch tilt deck system.</li>
+            <li>Tandem 7,000 lbs axles.</li>
+            <li>Deck width inside, fender to fender of 81.5".</li>
+            <li>Pressure treated pine / spruce decking and premium fir decking.</li>
+            <li>Expanded metal mesh deck grip in option.</li>
+            <li>Tool trail and toolbox with lid.</li>
+          </ul>
+          <a class="text-btn" href="#brandtForm">Request a Quote ↴</a>
+      </div>
+      <div class="col-xl-6 col-md-6 mt-0 mb-20 md-margin">
+          <img class="img-fluid px-3 px-md-5" src="/assets/img/brandt/TiltDeck-Premium-Model.webp" />
+          <h5 class="mb-2">Premium Model</h5>
+          <ul class="markers sm">
+            <li>Patented Lode N loc auto latch tilt deck system.</li>
+            <li>Tandem 8,000 lbs axles.</li>
+            <li>Deck width inside, fender to fender of 82.5".</li>
+            <li>Premium Fir Decking.</li>
+            <li>Expanded metal mesh deck grip.</li>
+            <li>Toolbox with lid.</li>
+            <li>Pallet fork holders.</li>
+            <li>Spare tire carrier & spare tire.</li>
+          </ul>
+          <a class="text-btn" href="#brandtForm">Request a Quote ↴</a>
+      </div>
     </div>
   </div>
 </section>
 
-<div id="form"></div>
+{% include brandt-gallery.html %} 
+{% include brandt-warranty.html %}
+
+<section class="brandt-brochures black-bg py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 pt-4 mb-4 pb-2 text-center"><h3 class="white-color">Resources</h3></div>
+      <div class="col-4 mb-10 text-center">
+        <a href="/assets/pdf/UT-ProductSheet-Overview-US-EN-V01-Web.pdf" target="_blank">
+          <img class="img-fluid px-0 px-md-5" src="/assets/img/brandt/UT-ProductSheet-Overview-US-EN-V01-Web-1.webp" />
+        </a>
+        <p class="pt-2 font-weight-bold white-color">Trailers Brochure</p>
+      </div>
+      <div class="col-4 mb-10 text-center">
+        <a href="/assets/pdf/UT-ProductSheet-Tilt-US-EN-V01-Web.pdf" target="_blank">
+          <img class="img-fluid px-0 px-md-5" src="/assets/img/brandt/UT-ProductSheet-Tilt-US-EN-V01-Web-1.webp" />
+        </a>
+        <p class="pt-2 font-weight-bold white-color">Tilt Deck Trailer Brochure</p>
+      </div>
+      <div class="col-4 mb-10 text-center">
+        <a href="/assets/pdf/UT-AG-ProductSheet-Tilt-CAN-EN-V01-WEB.pdf" target="_blank">
+          <img class="img-fluid px-0 px-md-5" src="/assets/img/brandt/UT-AG-ProductSheet-Tilt-CAN-EN-V01-WEB-1.webp" />
+        </a>
+        <p class="pt-2 font-weight-bold white-color">AG Tilt Deck Trailer Brochure</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include brandt-ref.html %}
 {% include brandt-form.html %} 
 
 <div id="brandt-brand" class="d-none">

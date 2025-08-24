@@ -500,7 +500,8 @@
   $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
-    nav:true,
+    nav:false,
+    dots: true,
     responsive:{
         0:{
             items:2
@@ -512,6 +513,20 @@
             items:4
         }
     }
+  });
+
+  // Magnific Popup (delegate to links inside the carousel)
+  $('.js-mfp-gallery').magnificPopup({
+    delegate: 'a.mfp-img',
+    type: 'image',
+    gallery: {
+      enabled: true,
+      tPrev: 'Previous',
+      tNext: 'Next'
+    },
+    removalDelay: 150,
+    mainClass: 'mfp-fade',
+    fixedContentPos: true
   });
 
   $.scrollUp({

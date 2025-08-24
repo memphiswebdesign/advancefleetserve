@@ -1,0 +1,22 @@
+<section class="brandt-gallery">
+  <div class="container py-5 mb-3">
+    <div class="row">
+      <div class="col-12 pt-0 mb-4 pb-1 text-center"><h3 class="">Gallery</h3></div>
+      <div class="col-12">
+        <div class="owl-carousel js-mfp-gallery">
+          {%- assign base = page.assets_base | default: '/assets/img/slider' -%}
+          {%- for img in page.gallery_images -%}
+            {%- assign file = img -%}
+            {%- assign alt = '' -%}
+            <div class="gallery-item">
+              <a class="mfp-img" href="{{ base }}/{{ file }}">
+                <img class="img-fluid"
+                  src="{{ base }}/{{ file }}" >
+              </a>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
