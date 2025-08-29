@@ -42,15 +42,31 @@
     url: /dielectric-testing
   - text: Emergency Road Service
     url: /emergency-road-service
-- text: Brands
+- text: Brands / Sales
   url: /brandt
   submenu:
   - text: Brandt
     url: /brandt
-  - text: ↳ Heavy Haul Trailers
-    url: /brandt/heavy-haul
-  - text: ↳ Utility Trailers
+  - text: Utility Trailers
     url: /brandt/utility-trailers
+  - text: ↳ Low Profile Flatbed Trailers
+    url: /brandt/low-profile-flatbed-trailers
+  - text: ↳ Tilt Deck Trailers
+    url: /brandt/tilt-deck-trailers
+  - text: ↳ Dump Trailers
+    url: /brandt/dump-trailers
+  - text: ↳ Deckover Flatbed Trailers
+    url: /brandt/deckover-flatbed-trailers
+  - text: Heavy Haul Trailers
+    url: /brandt/heavy-haul
+  - text: ↳ Fixed Roll Scissorneck Trailers
+    url: /brandt/fixed-roll-scissorneck-trailers
+  - text: ↳ Flip Roll Scissorneck Trailers
+    url: /brandt/flip-roll-scissorneck-trailers
+  - text: ↳ RGN - Low Boy
+    url: /brandt/rgn-low-boy
+  - text: ↳ On-Highway Transporters
+    url: /brandt/on-highway-transporters
 # - text: Truck & Trailer Sales
 #   url: /sales
 - text: Truck Center

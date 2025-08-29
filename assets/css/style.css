@@ -209,9 +209,9 @@ label {
  
 .btn {
 	-moz-user-select: none;
-	background: #FC0000;
-	border: medium none;
-	border-radius: 0;
+	background: rgba(255, 255, 255, .2);
+	border: 2px solid #FC0000;
+	border-radius: 30px;
 	color: #fff;
 	cursor: pointer;
 	display: inline-block;
@@ -227,9 +227,12 @@ label {
 	transition: all 0.3s ease 0s;
 	vertical-align: middle;
 	white-space: nowrap;
+	backdrop-filter: blur(5px);
 }
+.btn.fill {background: #FC0000;}
 .btn:hover{
 	color: #fff;
+	background: rgba(252, 0, 0, 1);
 }
 .btn.btn-sm {
 	font-size: 12px;
@@ -369,7 +372,7 @@ label {
 	justify-content: center;
 	margin: 0 auto;
 	padding: 0 22px;
-	padding-left: 30%;
+	padding-left: 27%;
 }
 
 @media (max-width: 1200px) {
@@ -912,7 +915,6 @@ main#afs-site {
 .features-wrap a {
 	font-size: 14px;
 	font-weight: 600;
-	color: #fff;
 }
 .home-three-about {
 	margin-top: -150px;
@@ -1078,6 +1080,7 @@ main#afs-site {
 
 .call-to-action h3 {
 	font-weight: 700;
+	text-shadow: 2px 2px 6px black;
 }
 .call-to-action p {
 	margin: 0;
@@ -1113,7 +1116,7 @@ main#afs-site {
 	bottom: 0;
 	right: 0;
 	background: #000;
-	opacity: .5;
+	opacity: .2;
 }
 .service-box.service-3 {
 	padding: 0;
@@ -1127,7 +1130,7 @@ main#afs-site {
 .sidebar-link ul {
 	padding: 25px 30px;
 }
-.servicee-sidebar h3 {
+.service-sidebar h3 {
 	font-size: 24px;
 	color: #fff;
 	font-weight: 600;
@@ -1487,7 +1490,7 @@ section#hero-video:before {
 	width: 35%;
 	background: #000;
 	background: linear-gradient(90deg,rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .5) 100%);
-	opacity: 1;
+	opacity: 0;
 	transform: rotate(10deg) scale(1.5);
 }
 @media (max-width:767px) {
@@ -2012,6 +2015,7 @@ p.hero-quoter {
   left: 0;
   width: 100%;
   height: 100%;
+  border: 0;
 }
 
 /*.google-map {
