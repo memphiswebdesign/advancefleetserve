@@ -1614,11 +1614,12 @@ p.hero-quoter {
 
 .footer-partners {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: start;
 	margin: 0 0 2em 0;
 }
 .footer-partners span {
-	margin: 0 35px 0 0;
+	margin: 0 35px 5px 0; 
 	transform-origin: top left;
 }
 .footer-partners span:last-child {margin: 0;}
@@ -1626,7 +1627,7 @@ p.hero-quoter {
 	display: inline-block;
 	height: 33px;
 }
-.footer-social-icon {display: flex;}
+.footer-social-icon {display: flex; flex-wrap: wrap;}
 .footer-social-icon span {
 	color: #fff;
 	display: block;
@@ -1639,6 +1640,7 @@ p.hero-quoter {
 	color: #fff;
 	font-size: 16px;
 	margin-right: 18px;
+	margin-bottom: 10px;
 	display: inline-block;
 }
 .footer-social-icon i {
