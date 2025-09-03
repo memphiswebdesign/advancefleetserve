@@ -1,29 +1,73 @@
-<nav id="mobile-menu">
-<ul class="top-level">
-    
+<nav id="mobile-menu" aria-label="Main">
+  <ul class="top-level">
     {% for link in site.data.navigation %}
-    {% assign active = nil %}
+      {% assign link_active = '' %}
 
-    {% for sublink in link.submenu %}
-        {% if page.url contains sublink.url %}
-            {% assign active = 'active' %}
-        {% endif %}
-    {% endfor %}
+      {%- if page.url == link.url or page.url contains link.url -%}
+        {% assign link_active = 'active' %}
+      {%- endif -%}
 
-    {% if page.url contains link.url %}
-        {% assign active = 'active' %}
-    {% endif %}
-     
-     <li class="{{ link.text | replace: ' ', '-' | downcase }}">
-         <a href="{{link.url}}" target="{{link.target}}">{{link.text}}{% if link.submenu %}<i class="icofont-simple-down"></i>{% endif %}</a>
+      {%- if link.submenu -%}
+        {%- for sublink in link.submenu -%}
+          {%- if page.url == sublink.url or page.url contains sublink.url -%}
+            {% assign link_active = 'active' %}
+          {%- endif -%}
+          {%- assign tri_list = sublink.tri_menu | default: sublink.submenu -%}
+          {%- if tri_list -%}
+            {%- for tri in tri_list -%}
+              {%- if page.url == tri.url or page.url contains tri.url -%}
+                {% assign link_active = 'active' %}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%} 
+
+      <li class="{{ link.text | replace: ' ', '-' | downcase }} {{ link_active }}">
+        <a href="{{ link.url | relative_url }}" {% if link.target %}target="{{ link.target }}"{% endif %}>
+          {{ link.text }}
+          {% if link.submenu %}<i class="icofont-simple-down" aria-hidden="true"></i>{% endif %}
+        </a>
+
         {% if link.submenu %}
-        <ul class="sub-menu">
+          <ul class="sub-menu" role="menu">
             {% for sublink in link.submenu %}
-            <li><a href="{{sublink.url}}">{{sublink.text}}</a></li>
+              {% assign sub_active = '' %}
+              {%- if page.url == sublink.url or page.url contains sublink.url -%}
+                {% assign sub_active = 'active' %}
+              {%- endif -%}
+
+              {%- assign tri_list = sublink.tri_menu | default: sublink.submenu -%}
+              {%- if tri_list -%}
+                {%- for tri in tri_list -%}
+                  {%- if page.url == tri.url or page.url contains tri.url -%}
+                    {% assign sub_active = 'active' %}
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- endif -%}
+
+              <li class="{{ sub_active }}">
+                <a href="{{ sublink.url | relative_url }}">
+                  {{ sublink.text }}{% if tri_list %}
+                    <i class="icofont-simple-down" aria-hidden="true"></i>
+                  {% endif %}
+                </a>
+
+                {% if tri_list %}
+                  <ul class="tri-menu" role="menu">
+                    {% for tri in tri_list %}
+                      <li class="{% if page.url == tri.url or page.url contains tri.url %}active{% endif %}">
+                        <a href="{{ tri.url | relative_url }}">{{ tri.text }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+
+              </li>
             {% endfor %}
-        </ul>
+          </ul>
         {% endif %}
-    </li>
+      </li>
     {% endfor %}
-</ul>
+  </ul>
 </nav>

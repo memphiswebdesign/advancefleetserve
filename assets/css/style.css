@@ -424,7 +424,7 @@ label {
 .main-menu.second-menu ul li .sub-menu {
 	border-top: 3px solid #020d26;
 }
-.main-menu ul li:hover .sub-menu{
+.main-menu ul li:hover .sub-menu {
 	opacity: 1;
 	visibility: visible;
 	top: 100%;
@@ -434,7 +434,7 @@ label {
 	margin: 0;
 	border-bottom: 1px solid rgba(0,0,0,0.08);
 }
-.main-menu ul li .sub-menu li:last-child{
+.main-menu ul li .sub-menu li:last-child {
 	border: none;
 }
 .main-menu ul li .sub-menu li a {
@@ -447,13 +447,13 @@ label {
 .main-menu.second-menu ul li .sub-menu li a {
 	color: #020d26;
 }
-.main-menu.second-menu ul li .sub-menu li:hover a {
+.main-menu.second-menu ul li .sub-menu li a:hover {
 	color: #FC0000;
 }
 .transparent-menu ul li .sub-menu li a {
 	color: #020d26;
 }
-.main-menu ul li .sub-menu li a::before {
+.main-menu ul li .sub-menu li a:before {
 	position: absolute;
 	left: 6px;
 	color: #FC0000;
@@ -461,19 +461,34 @@ label {
 	transition: .3s;
 	opacity: 0;
 }
-.main-menu ul li .sub-menu li:hover a{
+/*.main-menu ul li .sub-menu li:hover a {
+	padding-left: 20px;
+}*/
+.main-menu ul li .sub-menu li a:hover {
 	padding-left: 20px;
 }
-.main-menu ul li .sub-menu li:hover a:before{
+/*.main-menu ul li .sub-menu li:hover a:before{
+	opacity: 1;
+	left: 10px;
+}*/
+.main-menu ul li .sub-menu li a:hover:before{
 	opacity: 1;
 	left: 10px;
 }
-.main-menu ul li:hover> a{
+.main-menu ul li > a:hover {
 	color: #FC0000
 }
-.main-menu ul li:hover a::before,.main-menu ul li:hover a::after{
+/*.main-menu ul li:hover a::before,.main-menu ul li:hover a::after{
+	opacity: 1;
+}*/
+.main-menu ul li:hover a::before,.main-menu ul li a:hover:after{
 	opacity: 1;
 }
+
+.main-menu ul li .sub-menu li ul.tri-menu {background: #f0f0f0; padding-left: 4px;}
+.main-menu ul li .sub-menu li ul.tri-menu li {border: none;}
+.main-menu ul li .sub-menu li ul.tri-menu li a {padding: 4px 15px 4px 20px;}
+
 .menu-active {
 	color: #FC0000 !important;
 }
