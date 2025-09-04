@@ -1437,7 +1437,8 @@ main#afs-site {
 }
 .team-img {
 	position: relative;
-/*	overflow: hidden;*/
+	overflow: hidden;
+	aspect-ratio: 200 / 285;
 }
 /*.team-img::before {
 	content: "";
@@ -1455,6 +1456,8 @@ main#afs-site {
 }*/
 .team-img img {
 	width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 .team-info {
 	background: rgba(255,255,255,.85);
@@ -1480,7 +1483,6 @@ main#afs-site {
 }
 .team-info span {
 	font-size: 14px;
-	color: #777;
 }
 
 /* Video Hero */

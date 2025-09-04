@@ -59,6 +59,18 @@
 
     {% include footer.html %}
 
+    <!-- Lightbox root -->
+    <div class="video-lightbox" id="videoLightbox" aria-hidden="true">
+      <div class="video-dialog" role="dialog" aria-modal="true" aria-label="Video">
+        <button class="video-close" type="button" aria-label="Close">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+        <div class="video-host" id="videoHost"></div>
+      </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{{site.baseurl}}/assets/js/vendor/jquery-1.12.4.min.js"></script>

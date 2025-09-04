@@ -3,9 +3,22 @@ layout: page
 title: Truck Service
 permalink: /truck-service
 featuredImage: /assets/img/services/advance-fleet-services-truck-service.jpg
+gallery_images:
+  - afs-truck-service1.webp
+  - afs-truck-service2.webp
+  - afs-truck-service3.webp
+  - afs-truck-service4.webp
+  - afs-truck-service5.webp
+  - afs-truck-service6.webp
+  - afs-truck-service7.webp
+  - afs-truck-service8.webp
+  - afs-truck-service9.webp
+  - afs-truck-service10.webp
+  - afs-truck-service11.webp
+  - afs-truck-service12.webp
 ---
 
-<div class="container py-5">
+<div class="container pt-5 pb-0">
     <div class="row">
         <div class="col-xl-12 col-lg-12 mb-10 text-center">
             <div class="section-title service-title">
@@ -25,17 +38,20 @@ featuredImage: /assets/img/services/advance-fleet-services-truck-service.jpg
                 <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/stXCgIam7X8?rel=0' frameborder='0' allowfullscreen></iframe></div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-4 mb-20">
-            <img class="img-fluid pl-sm-0" src="{{site.baseurl}}/assets/img/services/afs-truck-service-engine.jpg" />
-        </div>
-        <div class="col-4 mb-20">
-            <img class="img-fluid pl-sm-0" src="{{site.baseurl}}/assets/img/services/afs-nextair-service-truck.jpg" />
-        </div>
-        <div class="col-4 mb-20">
-            <img class="img-fluid pl-sm-0" src="{{site.baseurl}}/assets/img/services/afs-truck-service-engine2.jpg" />
-        </div>
-    </div>
 </div>
 
+{% include brandt-gallery.html %}
+<style>
+.gallery-item {
+    position: relative;
+    aspect-ratio: 16 / 12;
+}
+.owl-carousel .owl-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+</style>
+
 {% include proudly-service.html %}
+
