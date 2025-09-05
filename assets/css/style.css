@@ -901,19 +901,31 @@ main#afs-site {
 	height: 100%;
 	background: #eee;
 	border: 1px solid #e6e6e6;
-	padding: 18% 20px;
+	padding: 4% 15px;
 	background-size: cover;
 	background-position: center;
+	text-align: center;
+	height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 756px) {
+	.features-wrap {height: 290px;}
+}
+@media (min-width: 991px) {
+	.features-wrap {height: 320px;}
 }
 .features-wrap:before {
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: .3;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: .3;
 }
 
 .features-wrap > * {position: relative; z-index: 2;}
