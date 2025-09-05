@@ -3,9 +3,14 @@ layout: page
 title: Truck Parts
 permalink: /truck-parts
 featuredImage: /assets/img/services/advance-fleet-services-truck-service.jpg
+gallery_images:
+  - afs-part-shelf.jpg
+  - afs-brakes.jpg
+  - afs-truck-parts.jpg
+  - afs-truck-parts2.jpg
 ---
 
-<div class="container py-5">
+<div class="container pt-5 pb-0">
     <div class="row">
         <div class="col-xl-12 col-lg-12 mb-10 text-center">
             <div class="section-title service-title">
@@ -28,20 +33,20 @@ featuredImage: /assets/img/services/advance-fleet-services-truck-service.jpg
             <img class="img-fluid pl-sm-0 pl-md-4" src="{{site.baseurl}}/assets/img/team/afs-career4.webp" />
         </div>
     </div>
-    <div class="row mt-5" style="justify-content: space-between;">
-        <div class="col-6 col-md-3 col-lg-3 col-xl-3 mb-10">
-            <img class="img-fluid" src="{{site.baseurl}}/assets/img/services/afs-part-shelf.jpg" />
-        </div>
-        <div class="col-6 col-md-3 col-lg-3 col-xl-3 mb-10">
-            <img class="img-fluid" src="{{site.baseurl}}/assets/img/services/afs-brakes.jpg" />
-        </div>
-        <div class="col-6 col-md-3 col-lg-3 col-xl-3 mb-10">
-            <img class="img-fluid" src="{{site.baseurl}}/assets/img/services/afs-truck-parts.jpg" />
-        </div>
-        <div class="col-6 col-md-3 col-lg-3 col-xl-3 mb-10">
-            <img class="img-fluid" src="{{site.baseurl}}/assets/img/services/afs-truck-parts2.jpg" />
-        </div>
-    </div>
 </div>
+
+{% include brandt-gallery.html %}
+
+<style>
+.gallery-item {
+    position: relative;
+    aspect-ratio: 16 / 12;
+}
+.owl-carousel .owl-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+</style>
 
 {% include proudly-service.html %}
