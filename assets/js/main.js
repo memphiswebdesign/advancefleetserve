@@ -407,6 +407,7 @@
     margin:10,
     nav:false,
     dots: true,
+    autoHeight: true,
     responsive:{
         0:{
             items:2
