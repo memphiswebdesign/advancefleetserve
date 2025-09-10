@@ -335,21 +335,16 @@
   // testimonial
 
   $(".testimonial-active").owlCarousel({
-    loop: true,
-    margin: 10,
+    loop: false,
+    margin: 0,
     nav: false,
-    dots: false,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 1
-      },
-      1000: {
-        items: 1
-      }
-    }
+    dots: true,
+    items: 1,
+    smartSpeed:450,
+    autoplay:true,
+    autoplayTimeout:8000,
+    animateIn: 'fadeIn',
+    autoplayHoverPause:true
   });
 
   // portfolio
