@@ -158,6 +158,9 @@ ul.markers li:before {
 }
 ul.markers.sm li {font-size: 14.5px; margin-bottom: 4px}
 
+ul.markers.gap-sm li {margin-bottom: 5px;}
+ul.markers.gap-xs li {margin-bottom: 3px;}
+
 main p, main ul, main li {
 	font-size: 16px;
 	font-weight: normal;
@@ -177,6 +180,7 @@ hr {
 	margin: 30px 0;
 	padding: 0;
 }
+hr.red {border-color: #FC0000;}
 label {
 	color: #7e7e7e;
 	cursor: pointer;

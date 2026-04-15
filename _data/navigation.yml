@@ -69,7 +69,6 @@
 - text: News
   url: /news
 - text: Careers
-  url: https://www.indeed.com/cmp/Advance-Trailer-Maintenance-2/
-  target: _blank
+  url: /careers
 - text: Contact
   url: /contact
