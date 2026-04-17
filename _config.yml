@@ -36,6 +36,9 @@ collections:
     output: true
   services:
     output: true
+  jobs:
+    output: true
+    permalink: /careers/:name/
 
 ########################################################
 # Site configuration for the Jekyll 3 Pagination Gem
