@@ -105,7 +105,6 @@ apply_url: https://www.indeed.com/job/service-manager-fabafb5bc894f1cd
       <li><i class="fas fa-tooth" aria-hidden="true"></i> Dental insurance</li>
       <li><i class="fas fa-heartbeat" aria-hidden="true"></i> Health insurance</li>
       <li><i class="fas fa-plane-departure" aria-hidden="true"></i> Paid time off</li>
-      <li><i class="fas fa-eye" aria-hidden="true"></i> Vision insurance</li>
     </ul>
   </section>
 </section>
