@@ -11,12 +11,20 @@ apply_url: https://www.indeed.com/job/level-diesel-technician-61e74519eb12217b
 <section class="job-posting diesel-tech-role">
   <header class="job-posting__header">
     <h2>Level A Diesel Technician</h2>
-    <p class="mb-1"><strong>Pay:</strong> $30.00 - $50.00 per hour</p>
+    <p class="mb-1"><strong>Pay:</strong> Competitive pay</p>
     <p><strong>Work Location:</strong> In person</p>
     <p class="mt-3 mb-2">
       <a class="text-btn" href="https://www.indeed.com/job/level-diesel-technician-61e74519eb12217b" target="_blank">Apply today →</a>
     </p>
   </header>
+  <section class="job-posting__team-support">
+    <h5><i class="fas fa-users" aria-hidden="true"></i> Team Support</h5>
+    <ul class="markers gap-sm">
+      <li>Assist and mentor junior technicians when needed</li>
+      <li>Collaborate with the Service Manager and team to keep workflow moving</li>
+      <li>Communicate clearly about job status, parts needs, and potential delays</li>
+    </ul>
+  </section>
   <section class="job-posting__description">
     <h4>Job Description</h4>
     <p>
@@ -25,6 +33,11 @@ apply_url: https://www.indeed.com/job/level-diesel-technician-61e74519eb12217b
       who can work independently, handle complex diagnostics, and set the standard for quality in the shop.
       If you’re tired of rushed jobs, poor communication, or working with outdated equipment, this is a place where your
       experience is valued.
+    </p>
+    <p>
+      This is also a leadership role. We’re looking for someone who leads in the shop, not just on paper — setting the
+      standard for other technicians through the quality of your own work, lending your expertise when a job gets
+      complicated, and helping the Service Manager schedule and prioritize jobs so the shop runs smoothly.
     </p>
   </section>
   <section class="job-posting__responsibilities">
@@ -45,12 +58,6 @@ apply_url: https://www.indeed.com/job/level-diesel-technician-61e74519eb12217b
     <ul class="markers gap-sm">
       <li>Perform thorough inspections to identify potential issues early</li>
       <li>Complete preventative maintenance services with strong attention to detail</li>
-    </ul>
-    <h5><i class="fas fa-users" aria-hidden="true"></i> Team Support</h5>
-    <ul class="markers gap-sm">
-      <li>Assist and mentor junior technicians when needed</li>
-      <li>Collaborate with the Service Manager and team to keep workflow moving</li>
-      <li>Communicate clearly about job status, parts needs, and potential delays</li>
     </ul>
     <h5><i class="fas fa-tools" aria-hidden="true"></i> Shop Responsibility</h5>
     <ul class="markers gap-sm">
@@ -79,22 +86,6 @@ apply_url: https://www.indeed.com/job/level-diesel-technician-61e74519eb12217b
       <li><i class="fas fa-handshake" aria-hidden="true"></i> A team that respects your time and skill</li>
       <li><i class="fas fa-thumbs-up" aria-hidden="true"></i> Leadership that supports doing the job right—not rushing it</li>
       <li><i class="fas fa-arrow-up" aria-hidden="true"></i> Opportunity to grow and take on more responsibility</li>
-    </ul>
-  </section>
-  <section class="job-posting__difference">
-    <h4>Why This Role Is Different</h4>
-    <p>You’ve worked in places where:</p>
-    <ul class="markers gap-sm">
-      <li><i class="fas fa-forward" aria-hidden="true"></i> You’re rushed through jobs</li>
-      <li><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> You’re fixing someone else’s mistakes</li>
-      <li><i class="fas fa-tools" aria-hidden="true"></i> You don’t have the tools you need</li>
-    </ul>
-    <p class="mb-2"><strong>That’s not how we operate.</strong></p>
-    <p>At Advance Fleet Services, we believe in:</p>
-    <ul class="markers gap-sm">
-      <li><i class="fas fa-check" aria-hidden="true"></i> Fixing it right the first time</li>
-      <li><i class="fas fa-user-friends" aria-hidden="true"></i> Supporting our technicians</li>
-      <li><i class="fas fa-medal" aria-hidden="true"></i> Building a team that takes pride in their work</li>
     </ul>
   </section>
   <section class="job-posting__apply">
