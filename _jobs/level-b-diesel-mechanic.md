@@ -1,7 +1,7 @@
 ---
 layout: jobs
 title: Level B Diesel Mechanic
-location: In person
+location: Mobile
 job_type: Hourly
 is_open: true
 excerpt: Hiring experienced Level B Diesel Mechanic for advanced diagnostics.
@@ -11,8 +11,8 @@ apply_url: https://www.indeed.com/job/diesel-mechanic-level-b-7d2f506f8857461e
 <section class="job-posting diesel-mechanic-level-b-role">
   <header class="job-posting__header">
     <h2>Level B Diesel Mechanic</h2>
-    <p><strong>Pay:</strong> From $25.00 per hour</p>
-    <p><strong>Work Location:</strong> In person</p>
+    <p><strong>Pay:</strong> Competitive pay</p>
+    <p><strong>Work Location:</strong> Mobile</p>
     <p>
       <a href="https://www.indeed.com/job/diesel-mechanic-level-b-7d2f506f8857461e" target="_blank" rel="noopener noreferrer">
         Apply today →
@@ -26,8 +26,8 @@ apply_url: https://www.indeed.com/job/diesel-mechanic-level-b-7d2f506f8857461e
     <h5><i class="fas fa-building" aria-hidden="true"></i> About Advance Fleet Services</h5>
     <p>
       Advance Fleet Services is a premier fleet service provider and truck center located in central Birmingham, Alabama.
-      With decades of experience and a team of highly skilled technicians, we provide full in-house service for all makes
-      and models of heavy-duty on-road and off-road equipment, including forklifts and trailers.
+      With decades of experience and a team of highly skilled technicians, we provide full in-house + mobile service for
+      all makes and models of heavy-duty on-road and off-road equipment, including forklifts and trailers.
     </p>
     <p>
       We’re a rapidly growing company with increasing customer demand, and we’re looking for a motivated Diesel Technician
@@ -47,7 +47,7 @@ apply_url: https://www.indeed.com/job/diesel-mechanic-level-b-7d2f506f8857461e
     <ul>
       <li><i class="fas fa-dollar-sign" aria-hidden="true"></i> Starting at $25.00/hour</li>
       <li><i class="fas fa-briefcase" aria-hidden="true"></i> Full-time position</li>
-      <li><i class="fas fa-clock" aria-hidden="true"></i> Minimum 40 hours per week</li>
+      <li><i class="fas fa-clock" aria-hidden="true"></i> Minimum 40 hours per week - overtime when needed</li>
     </ul>
   </section>
 
@@ -58,7 +58,7 @@ apply_url: https://www.indeed.com/job/diesel-mechanic-level-b-7d2f506f8857461e
       <li>Diagnose and troubleshoot mechanical and electrical issues using diagnostic software</li>
       <li>Conduct inspections and preventative maintenance</li>
       <li>Repair or replace defective parts and components</li>
-      <li>Perform welding and soldering as needed</li>
+      <li>Perform mobile PM's and on-site repairs at customer locations</li>
       <li>Maintain accurate repair order documentation</li>
       <li>Provide professional customer service and communication</li>
       <li>Participate in occasional roadside service calls</li>
@@ -82,7 +82,7 @@ apply_url: https://www.indeed.com/job/diesel-mechanic-level-b-7d2f506f8857461e
   <section class="job-posting__certifications">
     <h4>Preferred Certifications</h4>
     <ul>
-      <li><i class="fas fa-certificate" aria-hidden="true"></i> EPA 608/609 Certification</li>
+      <li><i class="fas fa-certificate" aria-hidden="true"></i> EPA 608/609 + Diesel Certification</li>
     </ul>
   </section>
 
